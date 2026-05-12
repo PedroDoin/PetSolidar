@@ -1,8 +1,28 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Login from "./pages/Login";
+import RecuperarSenha from "./pages/RecuperarSenha";
+import NovaSenha from "./pages/NovaSenha";
+
 function App() {
   return (
-    <div className="bg-blue-500 text-white p-10 text-3xl">
-      PetSolidar
-    </div>
+    <BrowserRouter>
+      <Routes>
+
+        <Route path="/" element={<Login />} />
+
+        <Route
+          path="/recuperar"
+          element={<RecuperarSenha />}
+        />
+
+        <Route
+          path="/nova-senha"
+          element={<NovaSenha />}
+        />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 
