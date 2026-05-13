@@ -6,26 +6,27 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
 
 export default function Input({ label, className = "", ...props }: InputProps) {
   return (
-    <div className="flex flex-col gap-1">
+    <div className="w-full">
       {label && (
-        <label className="text-sm font-medium text-gray-700">
+        <label className="mb-2 block text-sm font-semibold text-[#333333]">
           {label}
         </label>
       )}
 
       <input
         className={`
+          h-12
           w-full
-          rounded-xl
+          rounded-md
           border
-          border-gray-300
+          border-[#b5b5b5]
+          bg-white
           px-4
-          py-3
+          text-sm
+          text-[#111111]
           outline-none
-          transition
-          focus:border-gray-700
-          focus:ring-2
-          focus:ring-gray-200
+          placeholder:text-[#aaaaaa]
+          focus:border-[#555555]
           ${className}
         `}
         {...props}

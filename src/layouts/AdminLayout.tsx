@@ -15,10 +15,10 @@ export default function AdminLayout({
     <div className="flex min-h-screen bg-white">
       <Sidebar activeItem={activeItem} />
 
-      <div className="flex flex-1 flex-col">
+      <div className="flex min-h-screen flex-1 flex-col">
         <Header />
 
-        <main className="flex-1 p-8">
+        <main className="flex-1 px-7 py-7">
           {children}
         </main>
       </div>
