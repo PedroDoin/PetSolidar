@@ -1,7 +1,7 @@
-export default function RecuperarSenha() {
+export default function NovaSenha() {
   return (
     <div>
-      <h1>Recuperar Senha</h1>
+      <h1>Nova Senha</h1>
     </div>
   );
 }
