@@ -4,7 +4,6 @@ import Login from "./pages/Login";
 import CadastroOng from "./pages/CadastroOng";
 import RecuperarSenha from "./pages/RecuperarSenha";
 import NovaSenha from "./pages/NovaSenha";
-import Dashboard from "./pages/Dashboard";
 import Configuracoes from "./pages/Configuracoes";
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
         <Route path="/recuperar-senha" element={<RecuperarSenha />} />
         <Route path="/nova-senha" element={<NovaSenha />} />
 
-        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/configuracoes" element={<Configuracoes />} />
       </Routes>
     </BrowserRouter>

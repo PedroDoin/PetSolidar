@@ -71,12 +71,6 @@ export default function RecuperarSenha() {
           onChange={(event) => setEmail(event.target.value)}
         />
 
-        <Input
-          placeholder="Insira o código"
-          value={codigo}
-          onChange={(event) => setCodigo(event.target.value)}
-        />
-
         {erro && (
           <p className="rounded-md bg-red-100 px-4 py-3 text-sm font-medium text-red-700">
             {erro}
@@ -97,10 +91,6 @@ export default function RecuperarSenha() {
           disabled={carregandoCodigo}
         >
           {carregandoCodigo ? "Enviando..." : "Enviar código"}
-        </Button>
-
-        <Button type="submit" className="w-full uppercase">
-          Confirmar
         </Button>
       </form>
     </AuthLayout>

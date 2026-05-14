@@ -1,25 +1,27 @@
+type Status =
+  | "Disponível"
+  | "Em processo"
+  | "Adotado"
+  | "Lar Temporário"
+  | "Em tratamento"
+  | "Baixo"
+  | "Crítico"
+  | "Normal";
+
 type StatusBadgeProps = {
-  status:
-    | "Disponível"
-      "Em processo"
-    | "Adotado"
-      "Lar Temporário"
-    | "Em tratamento"
-    | "Baixo"
-    | "Crítico"
-    | "Normal";
+  status: Status;
 };
 
 export default function StatusBadge({ status }: StatusBadgeProps) {
-  const styles = {
-    Disponível: "border-green-700 bg-green-100 text-green-800",
-    Em processo: "border-yellow-700 bg-yellow-100 text-yellow-800",
-    Adotado: "border-blue-700 bg-blue-100 text-blue-800",
-    Lar Temporário: "border-purple-700 bg-purple-100 text-purple-800",
-    Em Tratamento: "border-orange-700 bg-orange-100 text-orange-800",
-    Baixo: "border-orange-700 bg-orange-100 text-orange-800",
-    Crítico: "border-red-700 bg-red-100 text-red-800",
-    Normal: "border-green-700 bg-green-100 text-green-800",
+  const styles: Record<Status, string> = {
+    "Disponível": "border-green-700 bg-green-100 text-green-800",
+    "Em processo": "border-yellow-700 bg-yellow-100 text-yellow-800",
+    "Adotado": "border-blue-700 bg-blue-100 text-blue-800",
+    "Lar Temporário": "border-purple-700 bg-purple-100 text-purple-800",
+    "Em tratamento": "border-orange-700 bg-orange-100 text-orange-800",
+    "Baixo": "border-orange-700 bg-orange-100 text-orange-800",
+    "Crítico": "border-red-700 bg-red-100 text-red-800",
+    "Normal": "border-green-700 bg-green-100 text-green-800",
   };
 
   return (
